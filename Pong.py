@@ -144,6 +144,8 @@ while True:
         s_b += 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(s_a, s_b), align="center", font=("Courier", 16, "normal"))
+        # change to os.system('aplay bounce.wav') for linux  
+        # change to os.system('afplay bounce.wav') for mac         
         winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
         
 
