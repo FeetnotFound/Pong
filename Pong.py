@@ -1,4 +1,5 @@
 import turtle
+# for mac and linux import os
 import winsound
 
 wn = turtle.Screen()
@@ -121,11 +122,15 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
+        # change to os.system('aplay bounce.wav') for linux  
+        # change to os.system('afplay bounce.wav') for mac
         winsound.PlaySound("wall.wav", winsound.SND_ASYNC)
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
+        # change to os.system('aplay bounce.wav') for linux  
+        # change to os.system('afplay bounce.wav') for mac
         winsound.PlaySound("wall.wav", winsound.SND_ASYNC)
     
     if ball.xcor() > 300:
@@ -134,6 +139,8 @@ while True:
         s_a += 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(s_a, s_b), align="center", font=("Courier", 16, "normal"))
+        # change to os.system('aplay bounce.wav') for linux  
+        # change to os.system('afplay bounce.wav') for mac
         winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
         
 
@@ -155,6 +162,8 @@ while True:
     if ball.xcor() > 260 and ball.xcor() < 270 and(ball.ycor() < p_b.ycor() + 40 and ball.ycor() > p_b.ycor() -50 ):
         ball.setx(260)
         ball.dx *= -1 
+        # change to os.system('aplay bounce.wav') for linux  
+        # change to os.system('afplay bounce.wav') for mac
         winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
 
     if ball.xcor() < -260 and ball.xcor() > -270 and (ball.ycor() < p_a.ycor() + 40 and ball.ycor() > p_a.ycor() -50 ):
